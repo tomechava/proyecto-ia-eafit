@@ -1,1 +1,19 @@
 dev-plan.html
+
+# Secrets - NEVER commit API keys
+app/.streamlit/secrets.toml
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.venv/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store

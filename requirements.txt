@@ -5,3 +5,8 @@ seaborn
 scikit-learn
 joblib
 imbalanced-learn
+xgboost
+streamlit
+groq
+plotly
+pillow
