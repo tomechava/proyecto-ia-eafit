@@ -2,6 +2,8 @@
 
 Sistema de evaluación crediticia que combina un modelo ML (XGBoost) con generación de reportes narrativos mediante LLM (Llama 3 via Groq).
 
+🚀 **App desplegada:** https://proyecto-ia-eafit-2026-1.streamlit.app/
+
 ## Estructura del proyecto
 
 ```
@@ -70,6 +72,10 @@ jupyter notebook notebooks/04_llm_app.ipynb
 - **Métricas test:** Accuracy 0.73 · F1 0.55 · ROC-AUC 0.77
 - **Dataset:** German Credit Risk (UCI) — 1000 clientes, 9 features
 - **Umbrales de riesgo:** Bajo <30% · Medio 30-55% · Alto >55%
+
+## Video demo
+
+🎥 *(link pendiente)*
 
 ## Equipo
 
