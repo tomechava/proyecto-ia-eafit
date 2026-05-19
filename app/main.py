@@ -200,7 +200,7 @@ if tab_sel == "🏠 Inicio":
         )
         fig.update_layout(margin=dict(t=20, b=20, l=20, r=20), height=260,
                           legend=dict(orientation="h", y=-0.1))
-        st.plotly_chart(\1, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -295,7 +295,7 @@ elif tab_sel == "🔍 Predicción":
     with g1:
         st.plotly_chart(fig_gauge,  use_container_width=True)
     with g2:
-        st.plotly_chart(\1, use_container_width=True)
+        st.plotly_chart(fig_donut, use_container_width=True)
 
     # ── Feature contribution mini-bar ────────────────────────────────────────
     st.subheader("Variables más influyentes en esta predicción")
@@ -309,7 +309,7 @@ elif tab_sel == "🔍 Predicción":
     fig_fi.update_layout(height=320, yaxis=dict(autorange="reversed"),
                          margin=dict(t=40, b=10, l=10, r=10),
                          coloraxis_showscale=False)
-    st.plotly_chart(\1, use_container_width=True)
+    st.plotly_chart(fig_fi, use_container_width=True)
 
     # ── LLM Report ────────────────────────────────────────────────────────────
     st.divider()
@@ -369,7 +369,7 @@ elif tab_sel == "📊 Rendimiento del Modelo":
                            yaxis=dict(range=[0.45, 0.82]),
                            margin=dict(t=50, b=10, l=10, r=10),
                            legend=dict(orientation="h", y=-0.2))
-    st.plotly_chart(\1, use_container_width=True)
+    st.plotly_chart(fig_comp, use_container_width=True)
 
     st.divider()
 
@@ -433,7 +433,7 @@ elif tab_sel == "📊 Rendimiento del Modelo":
                             title="Feature Importance — XGBoost (interactivo)")
         fig_fi_all.update_layout(height=500, coloraxis_showscale=False,
                                  margin=dict(t=50,b=10,l=10,r=10))
-        st.plotly_chart(\1, use_container_width=True)
+        st.plotly_chart(fig_fi_all, use_container_width=True)
         st.caption("**Checking account** es la variable más predictiva: refleja la liquidez inmediata del solicitante.")
 
     with tab_baseline:
@@ -507,7 +507,7 @@ elif tab_sel == "📈 Análisis Exploratorio":
                            barmode="overlay", nbins=30, opacity=0.75,
                            title=f"Distribución de {num_col} por Riesgo")
         fig.update_layout(height=380, margin=dict(t=50,b=10,l=10,r=10))
-        st.plotly_chart(\1, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True)
 
     with tab_cat:
         cat_col = st.selectbox("Variable categórica",
@@ -519,7 +519,7 @@ elif tab_sel == "📈 Análisis Exploratorio":
                      title=f"{cat_col} vs Riesgo crediticio")
         fig.update_layout(height=380, margin=dict(t=50,b=10,l=10,r=10),
                           xaxis_tickangle=-30)
-        st.plotly_chart(\1, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True)
 
     with tab_scatter:
         col_x = st.selectbox("Eje X", ["Age","Credit amount","Duration"], index=1)
@@ -528,7 +528,7 @@ elif tab_sel == "📈 Análisis Exploratorio":
                          color_discrete_map={"good":"#006b3c","bad":"#9b1b1b"},
                          opacity=0.6, title=f"{col_x} vs {col_y}")
         fig.update_layout(height=400, margin=dict(t=50,b=10,l=10,r=10))
-        st.plotly_chart(\1, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True)
 
     with tab_null:
         null_counts = df_raw.isnull().sum().reset_index()
