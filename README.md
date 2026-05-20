@@ -75,7 +75,7 @@ jupyter notebook notebooks/04_llm_app.ipynb
 
 ## Video demo
 
-🎥 *(link pendiente)*
+🎥 [*(link pendiente)*](https://drive.google.com/file/d/10o8cH05EuHobrBq5OEQ61rkIbgDxR7ZO/view?usp=sharing)
 
 ## Equipo
 
